@@ -1,0 +1,30 @@
+{
+    "name": "marcomdmj/localization",
+    "description": "Localization support for laravel projects.",
+    "type": "library",
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/http": "*",
+        "illuminate/routing": "*",
+        "illuminate/support": "*"
+    },
+    "require-dev": {
+        "mockery/mockery": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Madueño Mejia",
+            "email": "soluciones@myokram.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "MarcoMdMj\\Localization\\": "src"
+        },
+        "files": [
+            "src/Helpers/Helpers.php"
+        ]
+    }
+}

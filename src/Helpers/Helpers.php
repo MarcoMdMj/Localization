@@ -62,13 +62,13 @@ if (!function_exists('lRoute')) {
     /**
      * Shortcut for generating a localized version of the given route.
      *
-     * @param  string|null $locale     Language of the generated URL.
      * @param  string|null $name       Name of the route that will be translated.
+     * @param  string|null $locale     Language of the generated URL.
      * @param  mixed       $parameters Parameters to be passed to the generator.
      * @return string
      */
-    function lRoute($locale = null, $name = null, $parameters = null) {
-        return localization()->route($locale, $name, $parameters);
+    function lRoute($name = null, $locale = null, $parameters = null) {
+        return localization()->route($name, $locale, $parameters);
     }
 }
 

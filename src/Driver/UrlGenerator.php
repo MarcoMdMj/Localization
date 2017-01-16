@@ -51,15 +51,15 @@ class UrlGenerator
     /**
      * Generate a localized version of the given route.
      *
-     * @param  string|null $locale     Language of the generated URL.
      * @param  string|null $name       Name of the route that will be translated.
+     * @param  string|null $locale     Language of the generated URL.
      * @param  mixed       $parameters Parameters to be passed to the generator.
      * @return string
      */
-    public function getLocalizedRoute($locale = null, $name = null, $parameters = [])
+    public function getLocalizedRoute($name = null, $locale = null, $parameters = [])
     {
         if (is_null($locale)) {
-            $locale = $this->currentLocale();
+            $locale = $this->driver->currentLocale();
         }
 
         $this->driver->validateLocale($locale);
@@ -98,7 +98,7 @@ class UrlGenerator
         foreach (array_keys($this->driver->getSupportedLocales()) as $locale) {
             $parameters = ( is_array($parameters) and array_key_exists($locale, $parameters) ) ? $parameters[$locale] : $parameters;
 
-            $collection[$locale] = $this->getLocalizedRoute($locale, $name, $parameters);
+            $collection[$locale] = $this->getLocalizedRoute($name, $locale, $parameters);
         }
 
         return $collection;
@@ -193,7 +193,7 @@ class UrlGenerator
      */
     private function findTranslationId($segment)
     {
-        return array_search($segment, $this->trans());
+        return array_search($segment, (array) $this->trans());
     }
 
     /**

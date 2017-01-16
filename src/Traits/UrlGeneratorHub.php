@@ -54,14 +54,14 @@ trait UrlGeneratorHub
     /**
      * Generate a localized version of the given route.
      *
-     * @param  string|null $locale     Language of the generated URL.
      * @param  string|null $name       Name of the route that will be translated.
+     * @param  string|null $locale     Language of the generated URL.
      * @param  mixed       $parameters Parameters to be passed to the generator.
      * @return string
      */
-    public function route($locale = null, $name = null, $parameters = [])
+    public function route($name = null, $locale = null, $parameters = [])
     {
-        return $this->urlGenerator->getLocalizedRoute($locale, $name, $parameters);
+        return $this->urlGenerator->getLocalizedRoute($name, $locale, $parameters);
     }
 
     /**

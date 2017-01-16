@@ -11,6 +11,17 @@ if (!function_exists('localization')) {
     }
 }
 
+if (!function_exists('locale')) {
+    /**
+     * Shortcut for retrieving the current locale.
+     *
+     * @return string
+     */
+    function locale() {
+        return localization()->currentLocale();
+    }
+}
+
 if (!function_exists('lCurrent')) {
     /**
      * Shortcut for retrieving the current locale.
@@ -60,19 +71,33 @@ if (!function_exists('lTrans')) {
 
 if (!function_exists('lRoute')) {
     /**
-     * Shortcut for generating a localized version of the given route.
+     * Shortcut for generating the localized version of the requested route.
+     *
+     * @param  string|null $name       Name of the route that will be translated.
+     * @param  array       $parameters Parameters to be passed to the generator.
+     * @return string
+     */
+    function lRoute($name = null, $parameters = []) {
+        return localization()->route($name, null, $parameters);
+    }
+}
+
+if (!function_exists('localizedRoute')) {
+    /**
+     * Shortcut for generating the localized version of the requested route in the
+     * specified locale.
      *
      * @param  string|null $name       Name of the route that will be translated.
      * @param  string|null $locale     Language of the generated URL.
-     * @param  mixed       $parameters Parameters to be passed to the generator.
+     * @param  array       $parameters Parameters to be passed to the generator.
      * @return string
      */
-    function lRoute($name = null, $locale = null, $parameters = null) {
+    function localizedRoute($name = null, $locale = null, $parameters = []) {
         return localization()->route($name, $locale, $parameters);
     }
 }
 
-if (!function_exists('lRoutes')) {
+if (!function_exists('localizedRoutes')) {
     /**
      * Shortcut for generating the localized versions of the given route.
      *
@@ -80,7 +105,7 @@ if (!function_exists('lRoutes')) {
      * @param  mixed       $parameters Parameters to be passed to the generator.
      * @return array
      */
-    function lRoutes($name = null, $parameters = null) {
+    function localizedRoutes($name = null, $parameters = null) {
         return localization()->routes($name, $parameters);
     }
 }

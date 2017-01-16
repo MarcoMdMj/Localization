@@ -71,9 +71,9 @@ class UrlGenerator
             $qs = true;
         }
 
-        if (is_null($parameters)) {
-            $parameters = $this->router->current()->parameters();
-        }
+        // if (is_null($parameters)) {
+        //     $parameters = $this->router->current()->parameters();
+        // }
 
         $translatedRouteName = $this->getTranslatedRouteName($name, $locale);
 

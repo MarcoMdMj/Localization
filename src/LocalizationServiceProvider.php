@@ -101,6 +101,8 @@ class LocalizationServiceProvider extends ServiceProvider
     {
         $locale = $this->app[Localization::class]->initialize();
 
+        setlocale(LC_ALL, $locale);
+        
         $this->app->config->set('app.locale', $locale);
     }
 

@@ -202,14 +202,13 @@ class UrlGenerator
      * @param  null|string $id
      * @param  null|string $locale
      * @param  mixed       $parameters
-     * @param  string      $domain
      * @return string
      */
-    public function trans($id = null, $locale = null, $parameters = [], $domain = 'messages')
+    public function trans($id = null, $locale = null, $parameters = [])
     {
         $id = is_null($id) ? 'routes' : "routes.$id";
 
-        return app('translator')->trans($id, $parameters, $domain, $locale);
+        return app('translator')->trans($id, $parameters, $locale);
     }
 
     /**

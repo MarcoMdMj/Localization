@@ -41,7 +41,7 @@ class LocalizationServiceProvider extends ServiceProvider
             __DIR__ . '/../config/localization.php' => config_path('localization.php'),
         ], 'config');
 
-        $router->middleware('localization.redirect', \MarcoMdMj\Localization\Middleware\LocalizationRedirect::class);
+        $router->aliasMiddleware('localization.redirect', \MarcoMdMj\Localization\Middleware\LocalizationRedirect::class);
     }
 
     /**
@@ -103,7 +103,7 @@ class LocalizationServiceProvider extends ServiceProvider
 
         setlocale(LC_ALL, $locale);
         
-        $this->app->config->set('app.locale', $locale);
+        $this->app->setLocale($locale);
     }
 
     /**

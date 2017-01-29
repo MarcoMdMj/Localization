@@ -103,7 +103,7 @@ class LocalizationServiceProvider extends ServiceProvider
 
         setlocale(LC_ALL, $locale);
         
-        $this->app->setLocale($locale);
+        $this->app->config->set('app.locale', $locale);
     }
 
     /**

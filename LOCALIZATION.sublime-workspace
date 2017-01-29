@@ -516,8 +516,16 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/I/REPOSITORIES/MARCOMDMJ/LOCALIZATION"
+	],
 	"file_history":
 	[
+		"/I/REPOSITORIES/MARCOMDMJ/LOCALIZATION/src/Driver/UrlGenerator.php",
+		"/I/REPOSITORIES/MARCOMDMJ/LOCALIZATION/composer.json",
+		"/I/REPOSITORIES/MARCOMDMJ/LOCALIZATION/src/Helpers/Helpers.php",
+		"/I/REPOSITORIES/MARCOMDMJ/LOCALIZATION/src/LocalizationServiceProvider.php",
 		"/I/SPORTANDWEB/V4/SportAndWeb/vendor/marcomdmj/localization/src/Driver/UrlGenerator.php",
 		"/I/SPORTANDWEB/V4/SportAndWeb/vendor/laravel/framework/src/Illuminate/Translation/Translator.php",
 		"/I/SPORTANDWEB/V4/SportAndWeb/vendor/marcomdmj/localization/src/Localization.php",
@@ -641,11 +649,7 @@
 		"/I/SPORTANDWEB/V4/SportAndWeb/public/js/cropit.js",
 		"/C/Users/Marco/AppData/Roaming/Sublime Text 3/Packages/User/snippets/formfield.sublime-snippet",
 		"/C/Users/Marco/AppData/Roaming/Sublime Text 3/Packages/User/snippets/ctr.blade-snippet",
-		"/C/Users/Marco/AppData/Roaming/Sublime Text 3/Packages/User/snippets/ct.sublime-snippet",
-		"/C/Users/Marco/AppData/Roaming/Sublime Text 3/Packages/Blade Snippets/snippets/blade-can_else.sublime-snippet",
-		"/I/SPORTANDWEB/V4/SportAndWeb/vendor/laravel/framework/src/Illuminate/Routing/Redirector.php",
-		"/I/SPORTANDWEB/V4/SportAndWeb/resources/lang/es/_routes.php",
-		"/I/REPOSITORIES/MARCOMDMJ/LOCALIZATION/src/Helpers/Helpers.php"
+		"/C/Users/Marco/AppData/Roaming/Sublime Text 3/Packages/User/snippets/ct.sublime-snippet"
 	],
 	"find":
 	{
@@ -871,6 +875,26 @@
 		"selected_items":
 		[
 			[
+				"urlgene",
+				"src\\Driver\\UrlGenerator.php"
+			],
+			[
+				"composer",
+				"composer.json"
+			],
+			[
+				"localizationser",
+				"src\\LocalizationServiceProvider.php"
+			],
+			[
+				"helper",
+				"src\\Helpers\\Helpers.php"
+			],
+			[
+				"urlge",
+				"src\\Driver\\UrlGenerator.php"
+			],
+			[
 				"url",
 				"src\\Driver\\UrlGenerator.php"
 			],
@@ -895,10 +919,6 @@
 				"resources\\lang\\en\\routes.php"
 			],
 			[
-				"urlgene",
-				"vendor\\marcomdmj\\localization\\src\\Driver\\UrlGenerator.php"
-			],
-			[
 				"localiza",
 				"vendor\\marcomdmj\\localization\\src\\LocalizationServiceProvider.php"
 			],
@@ -913,10 +933,6 @@
 			[
 				"rweb",
 				"routes\\web.php"
-			],
-			[
-				"localizationser",
-				"vendor\\marcomdmj\\localization\\src\\LocalizationServiceProvider.php"
 			],
 			[
 				"kerne",
@@ -1369,18 +1385,6 @@
 			[
 				"formlang",
 				"resources\\views\\Admin\\Partials\\Form__LangFields.blade.php"
-			],
-			[
-				"infogri",
-				"resources\\assets\\sass\\components\\InfoGrid.sass"
-			],
-			[
-				"indexcon",
-				"app\\Http\\Controllers\\Admin\\IndexController.php"
-			],
-			[
-				"adminba",
-				"app\\Http\\Controllers\\Admin\\AdminBaseController.php"
 			]
 		],
 		"width": 0.0
